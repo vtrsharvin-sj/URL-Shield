@@ -24,7 +24,8 @@ downloads on sites that aren't verified safe.
   - [Directory Structure](#directory-structure)
   - [Backend](#backend)
   - [Extension](#extension)
-- [Acknowledgments](#acknowledgments)
+- [Contributing](#contributing)
+- [License](#license)
 
 # How it Works ?
 
@@ -191,12 +192,17 @@ Both protections treat a site as trusted only when the backend classified it
 `SAFE`; unknown or flagged sites are treated as untrusted (fail-closed).
 </br>
 
-# Acknowledgments
+# Contributing
 
-A very heartful thanks to the authors and owners of the following articles which propelled us to make URL Shield.
+Contributions are welcome. If you'd like to improve URL Shield:
 
-- [Malicious URL Detection based on Machine Learning](https://thesai.org/Downloads/Volume11No1/Paper_19-Malicious_URL_Detection_based_on_Machine_Learning.pdf)
-- [Detecting malicious URLs using machine learning techniques](https://ieeexplore.ieee.org/document/7850079)
-- [Malicious URL Detection using Machine Learning: A Survey](https://arxiv.org/pdf/1701.07179.pdf)
-  
-And also lots of gratitude for the whole team of "HackNITR 2021" for providing us the perfect platform to showcase our idea.
+1. Fork the repository and create a feature branch (`git checkout -b feature/your-idea`).
+2. Make your changes and keep the code style consistent with the existing files.
+3. Test the backend (`cd test && python server.py`) and load the extension unpacked to verify your change end to end.
+4. Commit with a clear message and open a pull request describing what you changed and why.
+
+Bug reports and feature ideas are equally welcome — open an issue with as much detail as you can.
+
+# License
+
+This project is released under the [MIT License](./LICENSE). You're free to use, modify, and distribute it; please keep the copyright notice intact.
