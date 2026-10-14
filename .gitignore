@@ -1,0 +1,10 @@
+.vscode/settings.json
+venv/
+__pycache__/
+*.pyc
+
+# Secrets and runtime files (never commit these)
+.env
+test/url_shield.log
+test/blacklist.txt
+test/markup.txt

@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+
+  "name": "URL Shield",
+  "description": "Automatically blocks malicious and phishing sites, guards camera/mic/location on untrusted sites, and stops risky downloads.",
+  "version": "1.3",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "downloads",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
